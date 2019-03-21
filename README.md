@@ -13,7 +13,7 @@ node tree-to-folder.js output.txt
 
 ## Tree
 
-<img src="https://raw.githubusercontent.com/bien-pr/tree-to-folder/master/images/IMG001.png" width="200" height="auto">
+![Structure](https://raw.githubusercontent.com/bien-pr/tree-to-folder/master/images/IMG001.png)
 
 ### output.txt
 
