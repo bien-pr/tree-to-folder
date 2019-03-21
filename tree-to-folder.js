@@ -25,14 +25,15 @@ fs.readFile(filename, 'utf8', function(err, data) {
   }
 
   for (var i = 0; i < lines.length; i++) {
+  	//console.log(lines[i]);
   	var folder = lines[i].split('---');
   	if(folder.length>1)
   	{
-  		var folderDepth = lines[i].split('|').length;
+  		var folderDepth = ((folder[0].length-1) / 4)+1;
   		var folderName = folder[folder.length-1];
   		h = h < folderDepth ? folderDepth : h;
 
-  		// if(folderDepth>5 ) console.log('name: ' + folderName + ', folderDepth: ' + folderDepth);
+  		//console.log('name: ' + folderName + ', folderDepth: ' + folderDepth);
   		
   		path[folderDepth] = folderName; 
   		var dir = '';
@@ -45,5 +46,5 @@ fs.readFile(filename, 'utf8', function(err, data) {
   	}
   }
   console.log('OK: Create ' + j + ' folders');
-  // console.log("Highest depth: " + h);
+  //console.log("Highest depth: " + h);
 });
